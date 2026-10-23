@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5 Selection | Adrian M. Cristobal</title>
+
+    <style>
+        :root {
+            --bg: #020b1b;
+            --panel: #061832;
+            --blue: #168bff;
+            --cyan: #35d5ff;
+            --text: #edf6ff;
+            --muted: #a9c3df;
+            --border: rgba(53, 213, 255, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 28px 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 15% 10%,
+                    rgba(22, 139, 255, 0.18), transparent 32%),
+                radial-gradient(circle at 85% 85%,
+                    rgba(53, 213, 255, 0.12), transparent 30%),
+                var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: min(900px, 100%);
+        }
+
+        .label {
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 14px 0 10px;
+            font-size: clamp(30px, 6vw, 52px);
+            line-height: 1.1;
+        }
+
+        .description {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: 18px;
+        }
+
+        .exercise-card {
+            min-height: 215px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: linear-gradient(
+                145deg,
+                #0a2343,
+                #041125
+            );
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+            transition:
+                transform 0.22s ease,
+                border-color 0.22s ease,
+                box-shadow 0.22s ease;
+        }
+
+        .exercise-card:hover,
+        .exercise-card:focus-visible {
+            transform: translateY(-5px);
+            border-color: var(--cyan);
+            box-shadow: 0 16px 38px rgba(22, 139, 255, 0.18);
+            outline: none;
+        }
+
+        .number {
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin: 15px 0 8px;
+            font-size: 21px;
+        }
+
+        .card-description {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .open-link {
+            margin-top: auto;
+            color: var(--cyan);
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 26px;
+            padding: 12px 18px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background: var(--panel);
+            color: var(--text);
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .back-button:hover,
+        .back-button:focus-visible {
+            border-color: var(--cyan);
+            outline: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="label">Adrian M. Cristobal · BSIT 1B</div>
+
+        <h1>Exercise 5 Selection</h1>
+
+        <p class="description">
+            Choose which Exercise 5 HTML activity you want to open.
+        </p>
+
+        <section class="exercise-grid">
+
+            <a class="exercise-card" href="mytable2.html">
+                <span class="number">PAGE 01</span>
+                <h2>My Table 2</h2>
+                <p class="card-description">
+                    Open the My Table 2 HTML activity.
+                </p>
+                <span class="open-link">Open Exercise →</span>
+            </a>
+
+            <a class="exercise-card" href="myhome.html">
+                <span class="number">PAGE 02</span>
+                <h2>My Home</h2>
+                <p class="card-description">
+                    Open the My Home HTML activity.
+                </p>
+                <span class="open-link">Open Exercise →</span>
+            </a>
+
+        </section>
+
+        <a class="back-button" href="../../index.html">
+            ← Back to My Website
+        </a>
+    </main>
+</body>
+</html>
